@@ -1,0 +1,16 @@
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+  namespace: default
+spec:
+  containers:
+    - name: debug
+      image: ubuntu:20.04
+      command:
+        - sleep
+        - infinity
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Always
